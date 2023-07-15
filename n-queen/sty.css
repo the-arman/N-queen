@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #484848;
+    color: #fff;
+  }
+  
+  code {
+      color: red;
+  }
+  
+  .container {
+    max-width: 80vmin;
+    margin: 0 auto;
+  }
+  
+  .solution {
+      margin: 10px 0 15px;
+      
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+  }
+  
+  .solution p {
+      font-size: 12px;
+  }
+  
+  .header {
+    background-color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333333;
+  }
+  
+  .input-group {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+        /* Style the chessboard */
+        .chessboard {
+          width: 80vmin;
+          height: 80vmin;
+          border: 1px solid black;
+          margin: 10px 0;
+          display: grid;
+          grid-template-columns: repeat(var(--n), 1fr);
+          grid-template-rows: repeat(var(--n), 1fr);
+        }
+  
+        /* Style the chessboard squares */
+        .square {
+          background-color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+  
+        /* Style the queen image */
+        .queen {
+          width: 80%;
+          height: 80%;
+        }
+  
+  label {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    color: #666666;
+  }
+  
+  input[type="number"] {
+    width: 4rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: #ffffff;
+    color: #333333;
+    text-align: center;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  button {
+    height: 2rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: #333333;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #666666;
+  }
+  
+  .board-container {
+    max-width: 80%;
+    overflow: auto;
+  }
+  
+  
+  
+  .footer {
+    background-color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666666;
+  }

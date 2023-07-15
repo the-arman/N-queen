@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>N Queens Visualization</title>
+    <link rel="stylesheet" href="sty.css" />
+    <style></style>
+    <style>
+        .chessboard {
+          display: grid;
+          grid-template-columns: repeat(n, 50px); /* Adjust the size (50px) as needed */
+          grid-template-rows: repeat(n, 50px); /* Adjust the size (50px) as needed */
+          gap: 1px; /* Gap between the squares, you can adjust this as needed */
+          border: 1px solid #000; /* Optional border */
+        }
+      
+        .square {
+          width: 100%;
+          height: 100%;
+        }
+      </style>
+      
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>N Queens Problem Solver</h1>
+        <div class="input-group">
+          <label for="queens">Enter the number of queens:</label>
+          <input type="number" id="queens" min="1" max="20" value="8" />
+          <button onclick=solve()>Solve</button>
+        </div>
+      </div>
+      <div class="">
+        <div class="chessboard" style="--n: 8"></div>
+      </div>
+
+      <div class="solution">
+        <h2>Solution</h2>
+        <p>
+          The solution for the N queens problem was achieved using a
+          backtracking algorithm that explores all possible configurations of
+          queens on the chessboard and eliminates invalid configurations until a
+          valid solution is found.
+        </p>
+        <p>
+          In this solution, the values used for the edges and vertices of the
+          graph are based on the number of queens in the N queens problem. The
+          vertices of the graph represent the columns of the chessboard, and are
+          numbered from 0 to N-1. Each vertex is connected to every other vertex
+          by an edge, forming a complete graph.
+        </p>
+
+        <p>
+          To reduce the number of potential solutions, we use the constraint
+          that there can only be one queen in each row. We start by placing a
+          queen in the first row, and then use the graph to explore all possible
+          placements of the remaining queens in the remaining rows. For each
+          placement, we check if it is valid by ensuring that no two queens are
+          in the same column or on the same diagonal. If a placement is valid,
+          we place the queens on the board and return true, indicating that a
+          solution has been found. If no solution is found, we return false.
+        </p>
+
+        <p>
+          The edges of the graph are used to determine the possible placements
+          of the next queen based on the positions of the queens that have
+          already been placed. For each queen that has been placed, we add an
+          edge between its column and every other column that is not in the same
+          row or diagonal. This forms a subgraph of the complete graph that
+          represents the valid placements for the next queen. We then explore
+          each of these valid placements recursively until we find a solution or
+          exhaust all possibilities.
+        </p>
+      </div>
+
+      <!-- <div class="footer">
+        <p>
+          Created By
+          <a href="https://github.com/Imam-Abubakar" target="_blank"
+            >Imam Abubakar</a
+          >
+        </p>
+      </div>
+    </div> -->
+
+    <script src="log.jss"></script>
+  </body>
+</html>
